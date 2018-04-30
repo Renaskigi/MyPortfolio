@@ -5,12 +5,28 @@
     width: 250px;
     height: 250px;
 }
-/* #project1 {
-
+#project1 {
+    width: 250px;
 }
+/*
 #project2 {
 
 }
 #project3 {
 
 } */
+
+icon-menu:before {
+    font-size: 50px;
+    position: absolute;
+    top: 20px;
+    right:20px;
+    content: "\e9bd";
+      
+}
+
+
+icon-github, .icon-linkedin {
+    font-size: 70px;
+    padding: 30px;
+}
