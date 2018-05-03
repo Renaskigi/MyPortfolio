@@ -4,12 +4,18 @@ body {
 
 a, a:link, a:active {
     text-decoration: none;
-    color: rgb(190, 57, 57);
+    color: rgb(253, 2, 2);
   }
   
   a:hover, a:focus {
-    color: #29506D;
+    color: rgb(255, 238, 6);
   }
   
   /* a:visited {
   } */
+
+  @media screen and (min-width: 640px) {
+    .icon-menu {
+        display:none
+    }
+}
