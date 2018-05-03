@@ -16,11 +16,11 @@
 
 } */
 
-icon-menu:before {
+.icon-menu:before {
     font-size: 50px;
     position: absolute;
     top: 20px;
-    right:20px;
+    right:0px;
     content: "\e9bd";
       
 }
@@ -29,4 +29,20 @@ icon-menu:before {
 icon-github, .icon-linkedin {
     font-size: 70px;
     padding: 30px;
+}
+
+#devphoto {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+}
+
+.skillSet {
+    text-align: center;
+}
+
+.name {
+    font-family: 'Berkshire Swash', cursive;
+    text-align: center;
+    font-size: 320%;
 }

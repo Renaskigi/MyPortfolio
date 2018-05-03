@@ -2,12 +2,19 @@ h1 {
     text-align: center
 }
 nav {
-    float: right;
+    text-align: center;
 }
 
 @media screen and (min-width: 640px) {
-    .icon-menu, input {
+    .icon-menu {
         display:none
     }
 }
 
+/* .main-nav ul {
+    display:none to display:block when hover
+} */
+
+/* .main-nav hover ul {
+    display:block;
+} */

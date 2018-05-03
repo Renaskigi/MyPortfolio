@@ -22,14 +22,14 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-icon-menu: before {
+.icon-menu:before {
     content: "\e9bd";
 }
 
-icon-github: before {
+.icon-github:before {
     content: "\eab0";
 }
 
-icon-linkedin:before {
+.icon-linkedin:before {
     content: "\eac9";
 }
