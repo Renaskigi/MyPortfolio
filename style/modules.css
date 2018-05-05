@@ -8,35 +8,23 @@
 #project1 {
     width: 250px;
 }
-/*
-#project2 {
-
-}
-#project3 {
-
-} */
-
 .icon-menu:before {
     font-size: 50px;
     position: absolute;
     top: 20px;
     right:0px;
     content: "\e9bd";
-      
 }
 
-icon-github, .icon-linkedin {
+.icon-github, .icon-linkedin {
     font-size: 20px;
     padding: 30px;
 }
-
 #devphoto {
     display: flex;
     justify-content: space-around;
     max-width: 100%;
 }
-
-
 .skill-wrapper {
     width: 400px;
     margin:auto;
