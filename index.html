@@ -14,7 +14,7 @@
 <body>
     <header>
         <h1 class="name">Ryan Lee</h1>
-        <nav>
+        <nav id="navLinx">
             <a href="#projects">Projects</a>
             <a href="https://github.com/Renaskigi">Github</a>
             <a href="#about">About</a>
@@ -39,23 +39,27 @@
         <section class="boxedpage1" id="project2"></section>
         <section class="boxedpage1" id="project3"></section>
         <h3 class="skillSet"><u>Skills</u></h3>
-        <ul class="skillSet">
-            <li>Javascript</li>
-            <li>JQuery</li>
-            <li>CSS</li>
-            <li>HTML</li>
-        </ul>
-        <ul class="skillSet">
-            <li>SQL</li>
-            <li>AJAX</li>
-            <li>POSTman</li>
-            <li>Etc.Etc.</li>
-        </ul>
+        <div class="skill-wrapper">
+            <ul class="skillSet">
+                <li>Javascript</li>
+                <li>JQuery</li>
+                <li>CSS</li>
+                <li>HTML</li>
+            </ul>
+            <ul class="skillSet">
+                <li>SQL</li>
+                <li>AJAX</li>
+                <li>POSTman</li>
+                <li>Etc.Etc.</li>
+            </ul>
+        </div>
         <h3 id="about"><u>About Me</u></h3>
         <p>I am an aspiring web and software developer, tech nerd, and polymath currently attending Alchemy Code Lab in the Portland, Oregon area.</p>
     </main>
     <footer>
-        <a href="https://www.linkedin.com/in/ryan-lee1/">LinkedIn</a>
+        <div class="footIcons">
+        <a href="http://linkedin.com/in/ryan-lee1/" target="_blank" class="icon-linkedin"> LinkedIn</a>
+        </div>
     </footer>
 </body>
 <script

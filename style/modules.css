@@ -25,9 +25,8 @@
       
 }
 
-
 icon-github, .icon-linkedin {
-    font-size: 70px;
+    font-size: 20px;
     padding: 30px;
 }
 
@@ -37,10 +36,11 @@ icon-github, .icon-linkedin {
     max-width: 100%;
 }
 
-.skillSet {
-    text-align: center;
-}
 
+.skill-wrapper {
+    width: 400px;
+    margin:auto;
+}
 .name {
     font-family: 'Berkshire Swash', cursive;
     text-align: center;
