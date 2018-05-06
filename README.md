@@ -1,0 +1,1 @@
+This is intended to be a website to showcase my portfolio as a developer.

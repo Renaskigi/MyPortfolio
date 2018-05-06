@@ -1,6 +1,15 @@
 h1 {
     text-align: center
 }
-nav {
-    float: right;
+.nav {
+    text-align: right;
 }
+
+
+/* .main-nav ul {
+    display:none to display:block when hover
+} */
+
+/* .main-nav hover ul {
+    display:block;
+} */

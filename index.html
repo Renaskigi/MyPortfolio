@@ -4,51 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/style/base.css" />
-    <link rel="stylesheet" href="/style/layout.css" />
-    <link rel="stylesheet" href="/style/modules.css" />
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="stylesheet" href="/style/layout.css">
+    <link rel="stylesheet" href="/style/modules.css">
+    <link rel="stylesheet" href="/style/icon.css">
     <title>RenaskigiPortfolio</title>
 </head>
 <body>
     <header>
-        <h1>Ryan Lee</h1>
-        <nav>
+        <h1 class="name">Ryan Lee</h1>
+        <nav class="nav-menu" id="navLinx">
             <a href="#projects">Projects</a>
             <a href="https://github.com/Renaskigi">Github</a>
             <a href="#about">About</a>
         </nav>
+        <span class="icon-menu"></span>
     </header>
     <main>
-        <h3 id="projects"><u>Projects</u></h3>
+        <div id="devphoto">
+            <img src="/pix/development.jpg" alt="devphoto">
+        </div>
+        
+        <h2 id="projects"><u>Projects</u></h2>
         <section>
             <div>
-                <img class="pixpage1" src="/pix/brute.png" alt="pic1">
-                <img class="pixpage1" src="/pix/brutearmor.jpeg" alt="pic2">
-                <img class="pixpage1" src="/pix/wizard.png" alt="pic3">   
+                <img class="pixpage1" src="/pix/dungeonfellows.png" alt="pic1"><br>
+                <a = href="https://4ampersands.github.io/rpg/">Show Me Dungeon Fellows!</a>
+                <!-- <img class="pixpage1" src="/pix/brutearmor.jpeg" alt="pic2">
+                <img class="pixpage1" src="/pix/wizard.png" alt="pic3">    -->
             </div>
         </section>
-        <section class="boxedpage1" id="project1"></section>
+        <section class="boxedpage1" id="project1"><p>Dungeon Fellows is a collaborative project that I took part in building with two other students over a period of three and a half days. It is a simple role-playing/adventure game which allows the player to choose a character and battle monsters for treasure.</p></section>
         <section class="boxedpage1" id="project2"></section>
         <section class="boxedpage1" id="project3"></section>
-        <h3><u>Skills</u></h3>
-        <ul>
-            <li>Javascript</li>
-            <li>JQuery</li>
-            <li>CSS</li>
-            <li>HTML</li>
-        </ul>
-        <ul>
-            <li>SQL</li>
-            <li>AJAX</li>
-            <li>POSTman</li>
-            <li>Etc.Etc.</li>
-        </ul>
+        <h3 class="skillSet"><u>Skills</u></h3>
+        <div class="skill-wrapper">
+            <ul class="skillSet">
+                <li>Javascript</li>
+                <li>JQuery</li>
+                <li>CSS</li>
+                <li>HTML</li>
+            </ul>
+            <ul class="skillSet">
+                <li>SQL</li>
+                <li>AJAX</li>
+                <li>POSTman</li>
+                <li>Etc.Etc.</li>
+            </ul>
+        </div>
         <h3 id="about"><u>About Me</u></h3>
         <p>I am an aspiring web and software developer, tech nerd, and polymath currently attending Alchemy Code Lab in the Portland, Oregon area.</p>
     </main>
     <footer>
-        <a href="https://www.linkedin.com/in/ryan-lee1/">LinkedIn</a>
+        <div class="footIcons">
+        <a href="http://linkedin.com/in/ryan-lee1/" target="_blank" class="icon-linkedin"> LinkedIn</a>
+        </div>
     </footer>
 </body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 <script type = "text/Javascript" src = "app.js"></script>
 </html>
