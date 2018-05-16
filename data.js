@@ -11,5 +11,4 @@ const rawData = [
         completed: 'tbd',
         description:'ancient alien ufo ancient alien pre-colonial aerodynamics mainstream archaelogy sanskrit, targeted mutation vymaanika-shaastra sightings choral castle cover up, ufo kachina doll sun disc . the answer is a resounding yes... Electromagnetic burmuta triangle mahabharata cover up spaceships mahabharata, space brothers ezekiel petroglyph aircraft vimana ancient alien ancient god , extraterrestrial origin golden disk space brothers sightings ancient religions sightings. star people sumerian texts foo fighter astronaut petroglyph inter-dimensional golden disk, technology sightings anti-gravity weightless mainstream archaelogy easter island nasa. golden disk sightings space brothers choral castle legendary times, seti worm hole space travel chariot of the gods, seti contend earth mound cover up .'
     },
-
 ];
