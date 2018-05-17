@@ -25,3 +25,9 @@ rawData.forEach(function (project) {
 rawData.forEach(function(project) {
     $('#articles').append(project.toHtml());
 });
+
+// $(document).ready(function(){
+//     $('#menu-icon').on('click', function() {
+//         $(this).toggleClass('icon-menu icon-happy2');
+//     });
+// });

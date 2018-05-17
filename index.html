@@ -14,6 +14,7 @@
 <body>
     <header>
         <h1 class="name">Ryan Lee</h1>
+        <span class="icon-menu"></span>
         <nav id="navLinx">
             <ul class="nav-menu">
             <li><a href="#projects">Projects</a></li>
@@ -21,7 +22,6 @@
             <li><a href="#about">About</a></li>
         </nav>
         </ul>
-        <span class="icon-menu"></span>
     </header>
     <main>
         <div id="devphoto">
@@ -37,9 +37,49 @@
                 <section class="project-body"></section>
                 </article>
             </section>
-        <section class="boxedpage1" id="project1"></section>
-        <section class="boxedpage1" id="project2"></section>
-        <section class="boxedpage1" id="project3"></section>
+        <<div class="scene">
+            <div class="carousel">
+              <div class="carousel__cell">1</div>
+              <div class="carousel__cell">2</div>
+              <div class="carousel__cell">3</div>
+              <div class="carousel__cell">4</div>
+              <div class="carousel__cell">5</div>
+              <div class="carousel__cell">6</div>
+              <div class="carousel__cell">7</div>
+              <div class="carousel__cell">8</div>
+              <div class="carousel__cell">9</div>
+              <div class="carousel__cell">10</div>
+              <div class="carousel__cell">11</div>
+              <div class="carousel__cell">12</div>
+              <div class="carousel__cell">13</div>
+              <div class="carousel__cell">14</div>
+              <div class="carousel__cell">15</div>
+            </div>
+          </div>
+          
+          <div class="carousel-options">
+            <p>
+              <label>
+                Cells
+                <input class="cells-range" type="range" min="3" max="15" value="9" />
+              </label>
+            </p>
+            <p>
+              <button class="previous-button">Previous</button>
+              <button class="next-button">Next</button>
+            </p>
+            <p>
+              Orientation:
+              <label>
+                <input type="radio" name="orientation" value="horizontal" checked />
+                horizontal
+              </label>
+              <label>
+                <input type="radio" name="orientation" value="vertical" />
+                vertical
+              </label>
+            </p>
+          </div>
         <h3 class="skillSet"><u>Skills</u></h3>
         <div class="skill-wrapper">
             <ul class="skillSet">
@@ -65,6 +105,7 @@
     </footer>
 </body>
 <script type="text/javascript" src ="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
 <script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="carousel.js"></script>
 </html>
