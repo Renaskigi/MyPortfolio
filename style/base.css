@@ -15,20 +15,17 @@ a, a:link, a:active {
     color: rgb(255, 238, 6);
   }
   
-  .nav-menu {
-      list-style: none;
-  }
-  
-  nav:hover #navLinx {
-      display: block
-  }
 
-  @media screen and (min-width: 640px) {
+
+  @media screen and (min-width: 480px) {
    
     #navLinx {
         text-align: center;
     }
     span {
-        display: none
+        display: none;
+    }
+    #burger-icon{
+        display: none;
     }
 }

@@ -22,12 +22,12 @@ rawData.forEach(function (project) {
     dataArr.push(new Project(project));
 });
 
-rawData.forEach(function(project) {
+dataArr.forEach(function(project) {
     $('#articles').append(project.toHtml());
 });
 
-// $(document).ready(function(){
-//     $('#menu-icon').on('click', function() {
-//         $(this).toggleClass('icon-menu icon-happy2');
-//     });
-// });
+$(document).ready(function(){
+    $('.icon-menu').on('click', function() {
+        $(this).toggleClass('icon-menu icon-happy2');
+    });
+});

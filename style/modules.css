@@ -8,14 +8,56 @@
 #project1 {
     width: 250px;
 }
-.icon-menu:before {
+.icon-menu {
+    display: inline-block;
+    width:50px;
+    height:50px;
     font-size: 50px;
     position: absolute;
     top: 20px;
     right:0px;
+}
+.icon-happy2 {
+    display: inline-block;
+    width:50px;
+    height:50px;
+    font-size: 50px;
+    position: absolute;
+    top: 20px;
+    right:0px;
+
+}
+.icon-happy2:before {
+    content: "\e9f0";
+    z-index:1;
+}
+.icon-menu:before {
     content: "\e9bd";
+    z-index:1;
+}
+.nav-menu {
+    list-style: none;
 }
 
+nav:hover #navLinx {
+    display: block
+}
+#toggle-1 {
+    display: inline-block;
+    width:50px;
+    height:50px;
+    font-size: 50px;
+    position: absolute;
+    top: 20px;
+    right:50px;
+}
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    /* For mobile, it's typically better to position checkbox on top of clickable
+       area and turn opacity to 0 instead. */
+ }
 .icon-github, .icon-linkedin {
     font-size: 20px;
     padding: 30px;
