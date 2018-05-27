@@ -33,3 +33,7 @@
 .icon-linkedin:before {
     content: "\eac9";
 }
+
+.icon-evil:before {
+	content: "\e9f0";
+}

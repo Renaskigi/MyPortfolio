@@ -14,12 +14,17 @@
 <body>
     <header>
         <h1 class="name">Ryan Lee</h1>
-        <nav class="nav-menu" id="navLinx">
-            <a href="#projects">Projects</a>
-            <a href="https://github.com/Renaskigi">Github</a>
-            <a href="#about">About</a>
+        <span class="icon-menu" id="burger-icon"></span>
+        <nav id="navLinx">
+            <!-- <label for="toggle-1">
+            <input type="checkbox" id="toggle-1">
+            </label> -->
+            <ul class="nav-menu">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="https://github.com/Renaskigi">Github</a></li>
+            <li><a href="#about">About</a></li>
         </nav>
-        <span class="icon-menu"></span>
+        </ul>
     </header>
     <main>
         <div id="devphoto">
@@ -27,17 +32,56 @@
         </div>
         
         <h2 id="projects"><u>Projects</u></h2>
-        <section>
-            <div>
-                <img class="pixpage1" src="/pix/dungeonfellows.png" alt="pic1"><br>
-                <a = href="https://4ampersands.github.io/rpg/">Show Me Dungeon Fellows!</a>
-                <!-- <img class="pixpage1" src="/pix/brutearmor.jpeg" alt="pic2">
-                <img class="pixpage1" src="/pix/wizard.png" alt="pic3">    -->
-            </div>
+        <section id="project-template">
+            <article class="template" data-category="cat">
+                <img src="" alt="">
+                <h1 class="name"></h1>
+                <p class="description"></p>
+            </article>
         </section>
-        <section class="boxedpage1" id="project1"><p>Dungeon Fellows is a collaborative project that I took part in building with two other students over a period of three and a half days. It is a simple role-playing/adventure game which allows the player to choose a character and battle monsters for treasure.</p></section>
-        <section class="boxedpage1" id="project2"></section>
-        <section class="boxedpage1" id="project3"></section>
+        <div class="scene">
+            <div class="carousel">
+              <div class="carousel__cell">1</div>
+              <div class="carousel__cell">2</div>
+              <div class="carousel__cell">3</div>
+              <div class="carousel__cell">4</div>
+              <div class="carousel__cell">5</div>
+              <div class="carousel__cell">6</div>
+              <div class="carousel__cell">7</div>
+              <div class="carousel__cell">8</div>
+              <div class="carousel__cell">9</div>
+              <div class="carousel__cell">10</div>
+              <div class="carousel__cell">11</div>
+              <div class="carousel__cell">12</div>
+              <div class="carousel__cell">13</div>
+              <div class="carousel__cell">14</div>
+              <div class="carousel__cell">15</div>
+            </div>
+          </div>
+          
+          <div class="carousel-options">
+            <p>
+              <label>
+                Cells
+                <input class="cells-range" type="range" min="3" max="15" value="9" />
+              </label>
+            </p>
+            <p>
+              <button class="previous-button">Previous</button>
+              <button class="next-button">Next</button>
+            </p>
+            <p>
+              Orientation:
+              <label>
+                <input type="radio" name="orientation" value="horizontal" checked />
+                horizontal
+              </label>
+              <label>
+                <input type="radio" name="orientation" value="vertical" />
+                vertical
+              </label>
+            </p>
+          </div>
         <h3 class="skillSet"><u>Skills</u></h3>
         <div class="skill-wrapper">
             <ul class="skillSet">
@@ -62,9 +106,8 @@
         </div>
     </footer>
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-<script type = "text/Javascript" src = "app.js"></script>
+<script type="text/javascript" src ="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="carousel.js"></script>
 </html>
