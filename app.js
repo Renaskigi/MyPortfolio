@@ -12,10 +12,11 @@ Project.prototype.displayConsole = function(){
 };
 
 Project.prototype.toHtml = function() {
-    const $newProject = $('#project.template').clone();
+    const $newProject = $('article.template').clone();
     $newProject.removeClass('template');
-    $newProject.find('.template-title').text(this.title);
-    $newProject.find('.article-body').html(this.body);
+    $newProject.find('.name').text(this.name);
+    $newProject.find('.description').html(this.description);
+    return $newProject;
 };
 
 rawData.forEach(function (project) {
@@ -23,7 +24,7 @@ rawData.forEach(function (project) {
 });
 
 dataArr.forEach(function(project) {
-    $('#articles').append(project.toHtml());
+    $('#project-template').append(project.toHtml());
 });
 
 $(document).ready(function(){
