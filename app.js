@@ -32,3 +32,25 @@ $(document).ready(function(){
         $(this).toggleClass('icon-menu icon-happy2');
     });
 });
+
+$('#projectlink').on('click', function() {
+    $('#about').hide();
+    $('#aboutpara').hide();
+    $('.skill-wrapper').hide();
+    $('.skillSet').hide();
+    $('#projects').show();
+    $('.carousel').show();
+    $('.carousel-options').show();
+    $('#project-template').show();
+});
+
+$('#aboutlink').on('click', function() {
+    $('#projects').hide();
+    $('#project-template').hide();
+    $('.carousel').hide();
+    $('.carousel-options').hide();
+    $('#about').show();
+    $('#aboutpara').show();
+    $('.skill-wrapper').show();
+    $('.skillSet').show();
+});
