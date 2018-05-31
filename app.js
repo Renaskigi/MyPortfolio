@@ -12,11 +12,9 @@ Project.prototype.displayConsole = function(){
 };
 
 Project.prototype.toHtml = function() {
-    const $newProject = $('article.template').clone();
-    $newProject.removeClass('template');
-    $newProject.find('.name').text(this.name);
-    $newProject.find('.description').html(this.description);
-    return $newProject;
+    const template = $('#project-template').html();
+    const compile = Handlebars.compile(template);
+    $('#projects').append(compile(this));
 };
 
 rawData.forEach(function (project) {
@@ -26,6 +24,7 @@ rawData.forEach(function (project) {
 dataArr.forEach(function(project) {
     $('#project-template').append(project.toHtml());
 });
+
 
 $(document).ready(function(){
     $('.icon-menu').on('click', function() {
@@ -54,3 +53,4 @@ $('#aboutlink').on('click', function() {
     $('.skill-wrapper').show();
     $('.skillSet').show();
 });
+

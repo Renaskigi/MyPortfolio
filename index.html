@@ -30,15 +30,16 @@
         <div id="devphoto">
             <img src="/pix/development.jpg" alt="devphoto">
         </div>
-        
+
         <h2 id="projects"><u>Projects</u></h2>
-        <section id="project-template">
-            <article class="template" data-category="cat">
-                <img src="" alt="">
-                <h1 class="name"></h1>
-                <p class="description"></p>
+        <script id="project-template" type="text/x-handlebars-template">
+            <article>
+              <h2>Project Name: {{name}}</h2>
+              <h2>Finished: {{completed}}</h2>
+              <p>{{{description}}}</p>
             </article>
-        </section>
+        </script>
+    
         <div class="scene">
             <div class="carousel">
               <div class="carousel__cell">1</div>
@@ -99,6 +100,7 @@
         </div>
         <h3 id="about"><u>About Me</u></h3>
         <p id="aboutpara">I am an aspiring web and software developer, tech nerd, and polymath currently attending Alchemy Code Lab in the Portland, Oregon area.</p>
+      
     </main>
     <footer>
         <div class="footIcons">
@@ -107,7 +109,8 @@
     </footer>
 </body>
 <script type="text/javascript" src ="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
 <script type="text/javascript" src="data.js"></script>
-<script type="text/javascript" src="app.js"></script>
 <script type="text/javascript" src="carousel.js"></script>
+<script type="text/javascript" src="app.js"></script>
 </html>
