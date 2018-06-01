@@ -1,15 +1,13 @@
 'use strict';
-const dataArr = [];
+
+const projectView = {};
 
 function Project (data) {
     this.name = data.name;
     this.completed = data.completed;
     this.description = data.description;
 }
-
-Project.prototype.displayConsole = function(){
-    console.log(this.name);
-};
+Project.all = [];
 
 Project.prototype.toHtml = function() {
     const template = $('#project-template').html();
@@ -17,14 +15,11 @@ Project.prototype.toHtml = function() {
     $('#projects').append(compile(this));
 };
 
-rawData.forEach(function (project) {
-    dataArr.push(new Project(project));
-});
-
-dataArr.forEach(function(project) {
-    $('#project-template').append(project.toHtml());
-});
-
+Project.initIndexPage = function() {
+    Project.all.forEach(function(projex) {
+        $('#project-template').append(projex.toHtml());
+    });
+};
 
 $(document).ready(function(){
     $('.icon-menu').on('click', function() {
@@ -53,4 +48,27 @@ $('#aboutlink').on('click', function() {
     $('.skill-wrapper').show();
     $('.skillSet').show();
 });
+
+Project.loadAll = function(projexIpsum) {
+    projexIpsum.forEach(function (project) {
+        Project.all.push(new Project(project));
+    });
+};
+
+projectView.fetchAll = function() {
+    if (localStorage.projexIpsum) {
+        Project.loadAll(JSON.parse(localStorage.projexIpsum));
+        Project.initIndexPage();
+    } else {
+        $.ajax({
+            type: 'GET',
+            url: '../Data/projex.json',
+            success: function(projexIpsum) {
+                localStorage.setItem('projexIpsum', JSON.stringify(projexIpsum));
+                Project.loadAll(projexIpsum);
+                Project.initIndexPage();
+            }
+        });
+    }
+};
 
