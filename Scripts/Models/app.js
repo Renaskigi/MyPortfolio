@@ -7,13 +7,13 @@ function Project (data) {
     this.completed = data.completed;
     this.description = data.description;
     this.screenshot = data.screenshot;
+    this.projectID = data.projectID;
 }
 Project.all = [];
 
 Project.prototype.toHtml = function() {
     const template = $('#project-template').html();
     const compile = Handlebars.compile(template);
-    $('#projects').append(compile(this));
     return compile(this);
 };
 
@@ -48,7 +48,7 @@ Project.loadAll = function(projexIpsum) {
 
 Project.initIndexPage = function() {
     Project.all.forEach(function(projex) {
-        // $('#projects').append(projex.toHtml());
+        $('#projects').append(projex.toHtml());
         $('.carousel').append(projex.toCarousel());
     });
 };
@@ -60,21 +60,18 @@ $(document).ready(function(){
 });
 
 $('#projectlink').on('click', function() {
-    $('#about', '#aboutpara', '.skillSet').hide();
-    $('#projects', '.carousel', '.carousel-options', '#project-template').show();
+    $('#about, #aboutpara, .skillSet').hide();
+    $('#projects, .carousel, .carousel-options, #carouselWrapper, #project-template').show();
 });
 
 $('#aboutlink').on('click', function() {
-    $('#projects', '.carousel', '.carousel-options', '#project-template').hide();
-    $('#about', '#aboutpara', '.skillSet').show();
+    $('#projects, .projectClass, #carouselWrapper, .carousel-options, #project-template').hide();
+    $('#about, #aboutpara,.skillSet').show();
 });
 
-$('.carousel_cell').on('click', () => {
-    Project.showProjex = function() {
-        Project.all.forEach(function(projex) {
-            $('#projects').append(projex.toHtml());
-        });
-    };
-    Project.showProjex();
+$('.carousel').on('click', 'img', (event) => {
+    const projectID = event.target.dataset.projectid;
+    console.log(projectID);
+    $('.projectClass').hide();
+    $(`#${projectID}`).show();
 });
-

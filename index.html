@@ -9,14 +9,13 @@
     <title>RenaskigiPortfolio</title>
     <script id="carousel-template" type="text/x-handlebars-template">
         <div class="carousel__cell">
-            <img src="{{screenshot}}" style="width:200px">
+            <img src="{{screenshot}}" style="width:200px" data-projectid="{{projectID}}">
         </div>
     </script>
     <script id="project-template" type="text/x-handlebars-template">
-        <article>
+        <article class="projectClass" id="{{projectID}}">
           <h2>Project Name: {{name}}</h2>
           <h2>Finished: {{completed}}</h2>
-          <!-- <img src="{{screenshot}}"> -->
           <p>{{{description}}}</p>
         </article>
     </script>
@@ -41,7 +40,7 @@
             <img src="/pix/development.jpg" alt="devphoto">
         </div>
 
-        <h2 id="projects"><u>Projects</u></h2>
+        <div id="projects"><u>Projects</u></div>
 
         <div id="carouselWrapper">
             <div class="scene">
