@@ -7,6 +7,19 @@
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
     <link rel="stylesheet" href="/style/main.css">
     <title>RenaskigiPortfolio</title>
+    <script id="carousel-template" type="text/x-handlebars-template">
+        <div class="carousel__cell">
+            <img src="{{screenshot}}" style="width:200px">
+        </div>
+    </script>
+    <script id="project-template" type="text/x-handlebars-template">
+        <article>
+          <h2>Project Name: {{name}}</h2>
+          <h2>Finished: {{completed}}</h2>
+          <!-- <img src="{{screenshot}}"> -->
+          <p>{{{description}}}</p>
+        </article>
+    </script>
 </head>
 <body>
     <header>
@@ -29,47 +42,42 @@
         </div>
 
         <h2 id="projects"><u>Projects</u></h2>
-        <script id="project-template" type="text/x-handlebars-template">
-            <article>
-              <h2>Project Name: {{name}}</h2>
-              <h2>Finished: {{completed}}</h2>
-              <p>{{{description}}}</p>
-            </article>
-        </script>
-    
-        <div class="scene">
-            <div class="carousel">
-              <div class="carousel__cell">1</div>
-              <div class="carousel__cell">2</div>
-              <div class="carousel__cell">3</div>
+
+        <div id="carouselWrapper">
+            <div class="scene">
+                <div class="carousel">
+                <!-- <div class="carousel__cell"></div>
+                <div class="carousel__cell"></div>
+                <div class="carousel__cell"></div> -->
+                </div>
+            </div>
+            
+            <div class="carousel-options">
+                <p>
+                <label>
+                    Cells
+                    <input class="cells-range" type="range" min="3" max="15" value="9" />
+                </label>
+                </p>
+                <p>
+                <button class="previous-button">Previous</button>
+                <button class="next-button">Next</button>
+                </p>
+                <p>
+                Orientation:
+                <label>
+                    <input type="radio" name="orientation" value="horizontal" checked />
+                    horizontal
+                </label>
+                <label>
+                    <input type="radio" name="orientation" value="vertical" />
+                    vertical
+                </label>
+                </p>
             </div>
         </div>
-          
-        <div class="carousel-options">
-            <p>
-              <label>
-                Cells
-                <input class="cells-range" type="range" min="3" max="15" value="9" />
-              </label>
-            </p>
-            <p>
-              <button class="previous-button">Previous</button>
-              <button class="next-button">Next</button>
-            </p>
-            <p>
-              Orientation:
-              <label>
-                <input type="radio" name="orientation" value="horizontal" checked />
-                horizontal
-              </label>
-              <label>
-                <input type="radio" name="orientation" value="vertical" />
-                vertical
-              </label>
-            </p>
-        </div>
-        <h3 class="skillSet"><u>Skills</u></h3>
         <div class="skill-wrapper">
+        <h3 class="skillSet"><u>Skills</u></h3>
             <ul class="skillSet">
                 <li>Javascript</li>
                 <li>JQuery</li>
@@ -93,9 +101,13 @@
         </div>
     </footer>
 </body>
-<script type="text/javascript" src ="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src= "https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
-<script type="text/javascript" src="Scripts/carousel.js"></script>
-<script type="text/javascript" src="Scripts/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.8.6/page.min.js"></script>
+<script src="Scripts/Views/carousel.js"></script>
+<script src="Scripts/Models/app.js"></script>
 <script>projectView.fetchAll();</script>;
+<script src="Scripts/Controllers/aboutController.js"></script>
+<script src="Scripts/Controllers/projectController.js"></script>
+<script src="Scripts/Controllers/routes.js"></script>
 </html>
