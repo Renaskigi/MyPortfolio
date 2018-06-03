@@ -19,19 +19,23 @@
           <p>{{{description}}}</p>
         </article>
     </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+        <li>
+            <a href="{{html_url}}" target="_blank">
+            <h3>Project Name: {{name}}</h2></a>
+            <h2>Last updated at: {{updated_at}}</h2>
+        </li>
+      </script>
 </head>
 <body>
     <header>
         <h1 class="name">Ryan Lee</h1>
         <span class="icon-menu" id="burger-icon"></span>
         <nav id="navLinx">
-            <!-- <label for="toggle-1">
-            <input type="checkbox" id="toggle-1">
-            </label> -->
             <ul class="nav-menu">
                 <li><a id="projectlink" href="#projects">Projects</a></li>
                 <li><a href="https://github.com/Renaskigi">Github</a></li>
-                <li><a id="aboutlink" href="#about">About</a></li>
+                <li><a id="aboutlink" href="/about">About</a></li>
             </ul>
         </nav>
     </header>
@@ -45,9 +49,6 @@
         <div id="carouselWrapper">
             <div class="scene">
                 <div class="carousel">
-                <!-- <div class="carousel__cell"></div>
-                <div class="carousel__cell"></div>
-                <div class="carousel__cell"></div> -->
                 </div>
             </div>
             
@@ -100,12 +101,15 @@
         </div>
     </footer>
 </body>
+<script src="githubToken.js"></script>
 <script type="text/javascript" src= "https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.8.6/page.min.js"></script>
 <script src="Scripts/Views/carousel.js"></script>
 <script src="Scripts/Models/app.js"></script>
-<script>projectView.fetchAll();</script>;
+<script src="Scripts/Models/repo.js"></script>
+<script src="Scripts/Views/repoView.js"></script>
+<script>repos.requestRepos();</script>
 <script src="Scripts/Controllers/aboutController.js"></script>
 <script src="Scripts/Controllers/projectController.js"></script>
 <script src="Scripts/Controllers/routes.js"></script>

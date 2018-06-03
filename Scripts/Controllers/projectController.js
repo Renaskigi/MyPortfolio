@@ -6,6 +6,7 @@
     projectController.initProjectPage = () => {
         $('#about', '.skill-Wrapperer').hide();
         $('#projects', '#carouselWrapper').fadeIn();
+        projectView.fetchAll();
     };
     module.projectController = projectController;
 })(window);

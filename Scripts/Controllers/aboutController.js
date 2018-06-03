@@ -4,9 +4,7 @@
     const aboutController = {};
 
     aboutController.initAboutPage = () => {
-        $('#projects', '#carouselWrapper').hide();
-        $('#about').fadeIn();
-        $('.skill-wrapper').fadeIn();
+        repoView.index();
     };
 
     module.aboutController = aboutController;

@@ -71,7 +71,6 @@ $('#aboutlink').on('click', function() {
 
 $('.carousel').on('click', 'img', (event) => {
     const projectID = event.target.dataset.projectid;
-    console.log(projectID);
     $('.projectClass').hide();
     $(`#${projectID}`).show();
 });
