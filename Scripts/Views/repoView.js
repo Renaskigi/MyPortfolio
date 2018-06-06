@@ -19,6 +19,6 @@
             repos.with('name').map(render)
         );
     };
-
+    repos.requestRepos();
     module.repoView = repoView;
 })(window);
