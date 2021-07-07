@@ -9,6 +9,10 @@ app.get( '', function (request, response) {
     response.sendFile( '/index.html', {root: '.'});
 });
 
+app.get( '/about', function (request, response) {
+    response.sendFile( '/index.html', {root: '.'});
+});
+
 app.post('/projects', bodyParser, function(request, response) {
     console.log(request.body);
     response.send('Record posted to server!!');
